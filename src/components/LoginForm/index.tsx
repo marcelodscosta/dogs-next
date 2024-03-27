@@ -5,6 +5,7 @@ import styles from './login-form.module.css';
 
 import loginAction from '@/actions/login';
 import Button from '../Button';
+import ErrorMesseger from '../Helper/ErrorMesseger';
 import { Input } from '../Input';
 
 
@@ -31,10 +32,8 @@ export default function LoginForm() {
       <form className={styles.form} action={action} >
         <Input label="Nome" type="text" name="username" />
         <Input label="Senha" type="password" name="password" />
+        <ErrorMesseger error={state.error} />
         <FormButton />
-        <p>{`${state.error}`}</p>
-
-
 
       </form>
 
