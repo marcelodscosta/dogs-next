@@ -5,6 +5,7 @@ import styles from './login-form.module.css';
 
 import loginAction from '@/actions/login';
 import Button from '../Button';
+import { Input } from '../Input';
 
 
 function FormButton() {
@@ -28,9 +29,8 @@ export default function LoginForm() {
   return (
     <>
       <form className={styles.form} action={action} >
-        <input type="text" placeholder="Usuário" name='username' />
-        <input type="password" placeholder="Senha" name='password' />
-
+        <Input label="Nome" type="text" name="username" />
+        <Input label="Senha" type="password" name="password" />
         <FormButton />
         <p>{`${state.error}`}</p>
 
