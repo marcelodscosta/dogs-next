@@ -4,6 +4,7 @@ import { useFormState, useFormStatus } from 'react-dom';
 import styles from './login-form.module.css';
 
 import loginAction from '@/actions/login';
+import { useEffect } from 'react';
 import Button from '../Button';
 import ErrorMesseger from '../Helper/ErrorMesseger';
 import { Input } from '../Input';
@@ -26,6 +27,10 @@ export default function LoginForm() {
     error: '',
     data: null,
   });
+
+  useEffect(() => {
+    if (state.ok) window.location.href = "/account";
+  }, [state.ok])
 
   return (
     <>
