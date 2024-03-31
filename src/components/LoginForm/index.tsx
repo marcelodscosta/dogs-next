@@ -4,6 +4,7 @@ import { useFormState, useFormStatus } from 'react-dom';
 import styles from './login-form.module.css';
 
 import loginAction from '@/actions/login';
+import Link from 'next/link';
 import { useEffect } from 'react';
 import Button from '../Button';
 import ErrorMesseger from '../Helper/ErrorMesseger';
@@ -39,8 +40,14 @@ export default function LoginForm() {
         <Input label="Senha" type="password" name="password" />
         <ErrorMesseger error={state.error} />
         <FormButton />
-
       </form>
+      <Link className={styles.perdeu} href={'/login/reset'}>Esqueceu a senha</Link>
+
+      <div className={styles.cadastro}>
+        <h2 className={styles.subtitle}>Cadastre-se</h2>
+        <p>Ainda não possui conta? Cadastre-se no site</p>
+        <Link className={'button'} href={'/login/create'}>Cadastro</Link>
+      </div>
 
     </>
   );
