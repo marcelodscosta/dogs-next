@@ -4,7 +4,7 @@ import styles from "./input.module.css";
 
 
 type InputProps = {
-  label: string,
+  label?: string,
   error?: string
 } & ComponentProps<'input'>;
 

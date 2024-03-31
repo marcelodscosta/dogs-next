@@ -41,7 +41,7 @@ export default function LoginForm() {
         <ErrorMesseger error={state.error} />
         <FormButton />
       </form>
-      <Link className={styles.perdeu} href={'/login/reset'}>Esqueceu a senha</Link>
+      <Link className={styles.perdeu} href={'/login/lost'}>Esqueceu a senha</Link>
 
       <div className={styles.cadastro}>
         <h2 className={styles.subtitle}>Cadastre-se</h2>
